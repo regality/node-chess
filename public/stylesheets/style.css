@@ -41,3 +41,7 @@ a {
 .square:nth-child(2n + 49) { background: #fff; }
 .square:nth-child(2n + 57) { background: #999; }
 .square:nth-child(2n + 58) { background: #fff; }
+
+.square.highlight {
+   background: yellow;
+}

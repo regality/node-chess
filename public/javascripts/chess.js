@@ -21,6 +21,7 @@
       tagName: "div",
 
       events: {
+         "click" : "highlight"
       },
 
       initialize: function() {
@@ -32,10 +33,12 @@
          if (this.model.get("piece") !== "") {
             var image = "/images/pieces/" + this.model.get("color") + this.model.get("piece") + ".gif";
             $(this.el).html('<img src="' + image + '" />');
-         } else {
-            $(this.el).html(this.model.get("piece"));
          }
          return this;
+      },
+
+      "highlight" : function() {
+         $(this.el).toggleClass("highlight");
       }
 
    });
